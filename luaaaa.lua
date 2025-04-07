@@ -357,11 +357,7 @@ local Window = Fluent:CreateWindow({
     },
 })
 
-Window:CreateHomeTab({
-    SupportedExecutors = {"Delta", "Fluxus", "Codex", "Cryptic", "Vegax", "Trigon", "Synapse X", "Script-Ware", "KRNL", "Seliware", "Solara", "Xeno", "ZORARA", "Fluent", "Nihon", "JJsploit", "AWP", "Wave", "Ronix"},
-    DiscordInvite = "https://discord.gg/D3T4ArjBqk",
-    Icon = 124997599556007,
-})
+
 local MainTab = Window:CreateTab({
     Name = "Main",
     Icon = "home_filled",
