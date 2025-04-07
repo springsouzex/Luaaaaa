@@ -338,15 +338,13 @@ local tracer = nil
 local distanceText = nil
 local highlight = nil
 
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_UI"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/InterfaceManager.lua"))()
+local Luna = loadstring(game:HttpGet("https://raw.githubusercontent.com/UnlessDahell/FeariseHub/refs/heads/main/Fearise_UI", true))()
 
 
-local Window = Fluent:CreateWindow({
+local Window = Luna:CreateWindow({
     Name = "The BillDev Hub (Blue Lock Rivals)",
     Subtitle = "by Galaxy/Jah/Whohurtyoudear",
-    LogoID = "124997599556007",
+    LogoID = "75237883871377",
     LoadingEnabled = true,
     LoadingTitle = "TheBillDevHub (Blue Lock Rivals)",
     LoadingSubtitle = "by Galaxy/Jah/Whohurtyoudear",
@@ -357,7 +355,11 @@ local Window = Fluent:CreateWindow({
     },
 })
 
-
+Window:CreateHomeTab({
+    SupportedExecutors = {"Delta", "Fluxus", "Codex", "Cryptic", "Vegax", "Trigon", "Synapse X", "Script-Ware", "KRNL", "Seliware", "Solara", "Xeno", "ZORARA", "Luna", "Nihon", "JJsploit", "AWP", "Wave", "Ronix"},
+    DiscordInvite = "https://discord.gg/D3T4ArjBqk",
+    Icon = 75237883871377,
+})
 local MainTab = Window:CreateTab({
     Name = "Main",
     Icon = "home_filled",
@@ -737,7 +739,7 @@ UITab:CreateButton({
         for _, connection in pairs(getconnections(game:GetService("CoreGui").ChildAdded)) do
             connection:Disable()
         end
-        game:GetService("CoreGui").Fluent:Destroy()
+        game:GetService("CoreGui").Luna:Destroy()
     end
 })
 
@@ -752,7 +754,7 @@ UITab:BuildThemeSection()
 
 
 UITab:BuildConfigSection()
-Fluent:Notification({
+Luna:Notification({
     Title = "Config Loaded",
     Content = "Your saved configuration has been automatically loaded.",
     Icon = "check_circle",
